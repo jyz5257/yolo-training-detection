@@ -31,7 +31,8 @@ After getting the weights file, you need to copy them into this folder: /darknet
 
 
 ### Running on ROS
-Open the terminal, and go into the launch folder inside the darknet_ros folder. Enter the following command:
+Open a terminal, and run your camera package first. Lauch the image to topic and the image format has to be raw image.
+Open another terminal, and go into the launch folder inside the darknet_ros folder. Enter the following command:
 ```
 $ roslaunch darknet_ros.launch
 ```

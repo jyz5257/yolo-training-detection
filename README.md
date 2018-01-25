@@ -31,7 +31,10 @@ After getting the weights file, you need to copy them into this folder: /darknet
 
 
 ### Running on ROS
-
+Open the terminal, and go into the launch folder inside the darknet_ros folder. Enter the following command:
+```
+$ roslaunch darknet_ros.launch
+```
 
 ## Training your own model
 The Training process can not work on ROS. You have to use the original darknet version to run that. As it runs very slow, it’s necessary to train with GPU. Or you can train it on BU ssh, which would much faster than running on your own machine.

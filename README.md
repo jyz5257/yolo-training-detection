@@ -19,14 +19,14 @@ To install YOLO on ros, copy the “darknet_ros” folder you just downloaded to
 ## How to run
 
 ### Prerequisites
-In order to run the detection, you need to get the weight file and the cfg file prepared.
+In order to run the detection, you need to get the weight file and the cfg file prepared.<br />
 The cfg file is the configuration file, which helps setting up the training and detection neural network. Darknet provides some cfg examples, which are included in this directory:
 /darknet_ros/darknet_ros/yolo_network_config/cfg/
 The weight file is the model you need to train before the detection. Darknet provides some pre-trained weights. You can run this to download the weights:
 ```
 wget http://pjreddie.com/media/files/yolo.weights
 ```
-In order to download other weights, you may change “yolo.weights” in the link to other weights, such as tiny-yolo.weights or yolo-voc.weights.
+In order to download other weights, you may change “yolo.weights” in the link to other weights, such as tiny-yolo.weights or yolo-voc.weights.<br />
 After getting the weights file, you need to copy them into this folder: /darknet_ros/darknet_ros/yolo_network_config/weights/
 
 
@@ -45,8 +45,8 @@ After collecting your image set, you need to draw the bounding boxes of objects 
 ```
 git clone https://github.com/puzzledqs/BBox-Label-Tool
 ```
-The result labels are not in the desired format. In YOLO training, you have to use absolute width and height. In the robot_data_convert folder, you can find a python script “transfer.py”, which can help you transferring the labels. 
-Before training, you need to create a folder “images”, which contains all your image data. And also create a folder “labels”, which contains all you labels. In addition, the image folder and the label folder have to be under the same directory.
+The result labels are not in the desired format. In YOLO training, you have to use absolute width and height. In the robot_data_convert folder, you can find a python script “transfer.py”, which can help you transferring the labels. <br />
+Before training, you need to create a folder “images”, which contains all your image data. And also create a folder “labels”, which contains all you labels. In addition, the image folder and the label folder have to be under the same directory.<br />
 Next, you need to build a train.txt and a test.txt, which split the dataset to training set and test set. In these txt, you need to include the images directories. For example:
 ```
 \images\m1.jpg
@@ -55,7 +55,7 @@ Next, you need to build a train.txt and a test.txt, which split the dataset to t
 You can copy the txt to the same directory with the image folder.
 
 ### Prepare the cfg file and weight
-You can download the pre-trained weight from here: http://pjreddie.com/media/files/darknet19_448.conv.23 Copy it to the same directory with the image folder. 
+You can download the pre-trained weight from here: http://pjreddie.com/media/files/darknet19_448.conv.23 Copy it to the same directory with the image folder. <br />
 In order to create your own cfg file, you could take the yolo-voc.cfg as an example. There are some parameters you need to change.
 * change the batch line [`batch=64`]
 * change subdivisions line [`subdivisions=32`]
